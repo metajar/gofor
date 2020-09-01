@@ -17,5 +17,7 @@ func catchAllHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	w.Write(re)
+	if re != nil {
+		w.Write(re)
+	}
 }
